@@ -340,6 +340,7 @@ func _avaliar_precisao_ritmica(tipo_batida: String, tempo_batida: float) -> void
 		return
 
 	var nota_esperada: Dictionary = partitura[indice_nota_atual]
+	## e = t_cli − t_esp
 	var erro_temporal: float = tempo_batida - nota_esperada["tempo"]
 	var erro_ms: int = int(erro_temporal * 1000.0)
 	var abs_erro_ms: int = abs(erro_ms)
