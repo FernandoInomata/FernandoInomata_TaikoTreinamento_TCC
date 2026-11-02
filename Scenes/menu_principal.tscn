@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://h1wvbgpkgyiw"]
+
+[ext_resource type="Script" uid="uid://co1a3pgt6lmtp" path="res://Scripts/menu_principal.gd" id="1_mnpr"]
+
+[node name="MenuPrincipal" type="Control" unique_id=362556081]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnpr")
+
+[node name="Titulo" type="Label" parent="." unique_id=1878909864]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 104.0
+offset_right = -40.0
+offset_bottom = 164.0
+theme_override_font_sizes/font_size = 40
+text = "TAIKO - TREINAMENTO RITMICO"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="." unique_id=887277251]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 164.0
+offset_right = -40.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 16
+text = "Escolha uma música para treinar, ou grave uma nova"
+horizontal_alignment = 1
+
+[node name="BotaoSelecionar" type="Button" parent="." unique_id=1357108971]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.0
+offset_top = 250.0
+offset_right = 180.0
+offset_bottom = 310.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Selecionar Música e Iniciar Treinamento"
+
+[node name="BotaoGravar" type="Button" parent="." unique_id=1627239289]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 322.0
+offset_right = 150.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 20
+text = "Gravar Nova Música"
+
+[node name="BotaoComoJogar" type="Button" parent="." unique_id=1773548201]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 394.0
+offset_right = 150.0
+offset_bottom = 454.0
+theme_override_font_sizes/font_size = 20
+text = "Como Jogar"
+
+[node name="BotaoConfiguracoes" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 466.0
+offset_right = 150.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 20
+text = "Configurações"
+
+[node name="BotaoPastaDados" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 546.0
+offset_right = 150.0
+offset_bottom = 596.0
+theme_override_font_sizes/font_size = 16
+text = "Abrir Pasta de Músicas e Relatórios"
+
+[node name="LabelPastaDados" type="Label" parent="." unique_id=1529647486]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 608.0
+offset_right = -40.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="BotaoSair" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -68.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "Sair"

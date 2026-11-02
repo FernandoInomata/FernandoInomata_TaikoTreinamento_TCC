@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://swbac4ehnwbs"]
+
+[ext_resource type="Script" uid="uid://dyaci4e37n6pc" path="res://Scripts/ui_manager.gd" id="1_f55v4"]
+[ext_resource type="AudioStream" uid="uid://ifbhoojari5p" path="res://Musics/direita_7v5KQmlH.mp3" id="4_0kh6o"]
+[ext_resource type="AudioStream" uid="uid://1lqr7lim3om1" path="res://Musics/esquerda_vMlcmpp9.mp3" id="5_jip1h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ogq8d"]
+font_size = 30
+
+[node name="UIManager" type="Node2D" unique_id=387230319]
+script = ExtResource("1_f55v4")
+
+[node name="Hit" type="ColorRect" parent="." unique_id=1985196755]
+offset_left = 250.0
+offset_top = 250.0
+offset_right = 300.0
+offset_bottom = 350.0
+
+[node name="BarraProgresso" type="ProgressBar" parent="." unique_id=2001000001]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1128.0
+offset_bottom = 44.0
+max_value = 1.0
+step = 0.001
+show_percentage = false
+
+[node name="LabelContagem" type="Label" parent="." unique_id=2001000002]
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 900.0
+offset_bottom = 80.0
+text = "Perfeito: 0   Bom: 0   Ruim: 0   Miss: 0"
+
+[node name="LabelCombo" type="Label" parent="." unique_id=2001000003]
+offset_left = 950.0
+offset_top = 50.0
+offset_right = 1128.0
+offset_bottom = 80.0
+text = "Sequencia: 0"
+horizontal_alignment = 2
+
+[node name="SomCentroDireito" type="AudioStreamPlayer2D" parent="." unique_id=709052823]
+stream = ExtResource("4_0kh6o")
+volume_db = -12.0
+max_polyphony = 10
+
+[node name="SomCentroEsquerdo" type="AudioStreamPlayer2D" parent="." unique_id=501252586]
+stream = ExtResource("5_jip1h")
+volume_db = -12.0
+max_polyphony = 10
+
+[node name="SomBordaDireito" type="AudioStreamPlayer2D" parent="." unique_id=1113172609]
+volume_db = -12.0
+max_polyphony = 10
+
+[node name="SomBordaEsquerdo" type="AudioStreamPlayer2D" parent="." unique_id=1454259000]
+volume_db = -12.0
+max_polyphony = 10
+
+[node name="SomContagem" type="AudioStreamPlayer" parent="." unique_id=2001000009]
+stream = ExtResource("4_0kh6o")
+volume_db = -2.0
+
+[node name="TelaDiagnostico" type="ColorRect" parent="." unique_id=1445206927]
+visible = false
+offset_right = 1148.0
+offset_bottom = 646.0
+color = Color(0.1098039, 0.1098039, 0.1411765, 0.92)
+
+[node name="Resultado" type="Label" parent="TelaDiagnostico" unique_id=1154809889]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 1145.0
+offset_bottom = 280.0
+label_settings = SubResource("LabelSettings_ogq8d")
+
+[node name="GraficoContagens" type="Control" parent="TelaDiagnostico" unique_id=2001000004]
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 300.0
+offset_right = 1108.0
+offset_bottom = 620.0
+
+[node name="DicaVoltar" type="Label" parent="TelaDiagnostico" unique_id=2001000008]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 612.0
+offset_right = 1108.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 18
+text = "P = jogar de novo        Esc = voltar ao menu"
+
+[node name="TelaInstrucoes" type="ColorRect" parent="." unique_id=2001000005]
+offset_right = 1148.0
+offset_bottom = 646.0
+color = Color(0.1098039, 0.1098039, 0.1411765, 0.97)
+
+[node name="Titulo" type="Label" parent="TelaInstrucoes" unique_id=2001000006]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 190.0
+offset_right = 1108.0
+offset_bottom = 250.0
+text = "TREINO"
+label_settings = SubResource("LabelSettings_ogq8d")
+horizontal_alignment = 1
+
+[node name="Corpo" type="Label" parent="TelaInstrucoes" unique_id=2001000007]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 280.0
+offset_right = 1108.0
+offset_bottom = 500.0
+text = "Pressione ESPAÇO para começar
+
+Esc = voltar ao menu
+
+Dúvidas? Veja \"Como Jogar\" no menu principal."
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1084724381]
+position = Vector2(574, 322)

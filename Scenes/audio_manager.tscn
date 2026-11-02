@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://brjafnc2bg0yj"]
+
+[ext_resource type="AudioStream" uid="uid://dli108of1kupb" path="res://Musics/Irodori.mp3" id="1_4tj6f"]
+[ext_resource type="Script" uid="uid://b5agc7nmf8j5s" path="res://Autoloads/audio_manager.gd" id="2_3l7gn"]
+
+[node name="AudioManager" type="AudioStreamPlayer2D" unique_id=1819243058]
+stream = ExtResource("1_4tj6f")
+script = ExtResource("2_3l7gn")

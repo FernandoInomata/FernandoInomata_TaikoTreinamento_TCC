@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dn1aptf1u1fp8"]
+
+[ext_resource type="Script" uid="uid://cy1xll846r7w" path="res://Scripts/selecao_musica.gd" id="1_slmc"]
+
+[node name="SelecaoMusica" type="Node2D" unique_id=1401425050]
+script = ExtResource("1_slmc")
+
+[node name="Titulo" type="Label" parent="." unique_id=1985728297]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 1108.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 28
+text = "SELECIONAR MUSICA PARA AVALIACAO"
+
+[node name="Dica" type="Label" parent="." unique_id=358907245]
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 1108.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 16
+text = "Clique em uma música. Na tela seguinte, aperte ESPAÇO para começar."
+
+[node name="ListaMusicas" type="VBoxContainer" parent="." unique_id=356005929]
+offset_left = 40.0
+offset_top = 110.0
+offset_right = 1108.0
+offset_bottom = 560.0
+theme_override_constants/separation = 12
+
+[node name="LabelListaVazia" type="Label" parent="." unique_id=1904499007]
+visible = false
+offset_left = 40.0
+offset_top = 120.0
+offset_right = 1108.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 18
+text = "Nenhuma musica gravada ainda."
+
+[node name="BotaoIrGravar" type="Button" parent="." unique_id=1388754945]
+visible = false
+offset_left = 40.0
+offset_top = 170.0
+offset_right = 340.0
+offset_bottom = 220.0
+text = "Gravar Primeira Musica"
+
+[node name="BotaoVoltar" type="Button" parent="." unique_id=1682002254]
+offset_left = 40.0
+offset_top = 580.0
+offset_right = 280.0
+offset_bottom = 620.0
+text = "Voltar ao Menu"

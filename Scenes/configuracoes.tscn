@@ -1,0 +1,181 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/configuracoes.gd" id="1_cfg"]
+[ext_resource type="Script" path="res://Scripts/previa_notas.gd" id="2_prv"]
+[ext_resource type="AudioStream" uid="uid://ifbhoojari5p" path="res://Musics/direita_7v5KQmlH.mp3" id="3_snd"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_estilo"]
+
+[node name="Configuracoes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfg")
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 14.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "CONFIGURAÇÕES"
+horizontal_alignment = 1
+
+[node name="Dica" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 72.0
+offset_bottom = 98.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "As escolhas são salvas automaticamente."
+horizontal_alignment = 1
+
+[node name="TextoAudio" type="Label" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 112.0
+offset_right = -80.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 24
+text = "Áudio"
+
+[node name="RotuloMusica" type="Label" parent="."]
+layout_mode = 1
+offset_left = 80.0
+offset_top = 156.0
+offset_right = 260.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 20
+text = "Música"
+vertical_alignment = 1
+
+[node name="SliderMusica" type="HSlider" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 270.0
+offset_top = 164.0
+offset_right = -200.0
+offset_bottom = 184.0
+step = 5.0
+value = 100.0
+
+[node name="ValorMusica" type="Label" parent="."]
+layout_mode = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -180.0
+offset_top = 156.0
+offset_right = -80.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 20
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RotuloBatidas" type="Label" parent="."]
+layout_mode = 1
+offset_left = 80.0
+offset_top = 204.0
+offset_right = 260.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 20
+text = "Batidas"
+vertical_alignment = 1
+
+[node name="SliderBatidas" type="HSlider" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 270.0
+offset_top = 212.0
+offset_right = -200.0
+offset_bottom = 232.0
+max_value = 200.0
+step = 5.0
+value = 100.0
+
+[node name="ValorBatidas" type="Label" parent="."]
+layout_mode = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -180.0
+offset_top = 204.0
+offset_right = -80.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 20
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextoMao" type="Label" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 262.0
+offset_right = -80.0
+offset_bottom = 298.0
+theme_override_font_sizes/font_size = 24
+text = "Como mostrar a mão de cada nota"
+
+[node name="OpcaoLetras" type="CheckBox" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 302.0
+offset_right = -80.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 20
+button_pressed = true
+button_group = SubResource("ButtonGroup_estilo")
+text = "Letras: a letra L (mão esquerda) ou R (mão direita) escrita no círculo"
+
+[node name="OpcaoMetade" type="CheckBox" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 348.0
+offset_right = -80.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 20
+button_group = SubResource("ButtonGroup_estilo")
+text = "Metade pintada: só a metade esquerda ou direita do círculo é colorida"
+
+[node name="Previa" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 80.0
+offset_top = 402.0
+offset_right = -80.0
+offset_bottom = 552.0
+script = ExtResource("2_prv")
+
+[node name="BotaoVoltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -68.0
+offset_right = 120.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Voltar ao Menu"
+
+[node name="TempoSalvar" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="SomTeste" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_snd")
+volume_db = -12.0

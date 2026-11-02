@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b6t44k2syvro2"]
+
+[ext_resource type="Script" uid="uid://clfys3mrejtlt" path="res://Scripts/gravacao.gd" id="1_grsc"]
+[ext_resource type="AudioStream" uid="uid://ifbhoojari5p" path="res://Musics/direita_7v5KQmlH.mp3" id="2_beep"]
+
+[node name="Gravacao" type="Node2D" unique_id=1092391520]
+script = ExtResource("1_grsc")
+
+[node name="Titulo" type="Label" parent="." unique_id=782910938]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 1108.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 28
+text = "GRAVAR NOVA MUSICA"
+
+[node name="BotaoImportar" type="Button" parent="." unique_id=869582832]
+offset_left = 40.0
+offset_top = 110.0
+offset_right = 320.0
+offset_bottom = 160.0
+text = "Importar Audio..."
+
+[node name="LabelArquivoAudio" type="Label" parent="." unique_id=2050083147]
+offset_left = 340.0
+offset_top = 122.0
+offset_right = 1108.0
+offset_bottom = 150.0
+text = "Nenhum audio selecionado."
+
+[node name="BotaoGravar" type="Button" parent="." unique_id=803264050]
+offset_left = 40.0
+offset_top = 190.0
+offset_right = 220.0
+offset_bottom = 240.0
+text = "Gravar"
+
+[node name="BotaoParar" type="Button" parent="." unique_id=1178105571]
+offset_left = 240.0
+offset_top = 190.0
+offset_right = 420.0
+offset_bottom = 240.0
+text = "Parar"
+
+[node name="LabelStatus" type="Label" parent="." unique_id=845857635]
+offset_left = 40.0
+offset_top = 260.0
+offset_right = 1108.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 18
+text = "Importe um áudio para começar."
+
+[node name="CampoNome" type="LineEdit" parent="." unique_id=2055364425]
+offset_left = 40.0
+offset_top = 350.0
+offset_right = 620.0
+offset_bottom = 390.0
+placeholder_text = "Nome da musica..."
+
+[node name="BotaoSalvar" type="Button" parent="." unique_id=189976355]
+offset_left = 640.0
+offset_top = 350.0
+offset_right = 820.0
+offset_bottom = 390.0
+text = "Salvar"
+
+[node name="BotaoVoltar" type="Button" parent="." unique_id=1766517997]
+offset_left = 40.0
+offset_top = 440.0
+offset_right = 280.0
+offset_bottom = 480.0
+text = "Voltar ao Menu"
+
+[node name="DialogoArquivo" type="FileDialog" parent="." unique_id=2083045993]
+title = "Open a File"
+size = Vector2i(700, 500)
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.mp3, *.ogg ; Arquivos de Audio (.mp3, .ogg)")
+
+[node name="SomContagem" type="AudioStreamPlayer" parent="." unique_id=1308915502]
+stream = ExtResource("2_beep")
+volume_db = -2.0
