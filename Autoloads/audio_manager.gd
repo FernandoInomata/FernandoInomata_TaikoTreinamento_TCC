@@ -109,7 +109,7 @@ func _process(delta: float) -> void:
 
 	if not playing:
 		return
-
+	## T_atual = T_mix − L_saíd
 	var tempo_mix: float = get_playback_position() + AudioServer.get_time_since_last_mix()
 
 	var latencia_saida: float = AudioServer.get_output_latency()
